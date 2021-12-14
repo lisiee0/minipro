@@ -1,4 +1,4 @@
-package minipro02;
+package com.javaex.minipro02;
 
 import java.util.ArrayList;
 import java.util.List;

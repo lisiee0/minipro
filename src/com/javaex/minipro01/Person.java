@@ -1,4 +1,4 @@
-package com.javaex.minipro;
+package com.javaex.minipro01;
 
 public class Person {
 	

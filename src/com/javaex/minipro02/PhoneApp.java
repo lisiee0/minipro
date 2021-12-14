@@ -1,4 +1,4 @@
-package minipro02;
+package com.javaex.minipro02;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
