@@ -47,6 +47,7 @@ public class PhoneApp {
 					Option_output.reenter();
 					break;
 			}
-		}		
+		}
+		br.close();
 	}
 }
