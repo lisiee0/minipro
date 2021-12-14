@@ -1,5 +1,8 @@
 package minipro02;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Person {
 	
 	private String name;
@@ -48,5 +51,5 @@ public class Person {
 		return name+","+hp+","+company;
 	}
 	
-	
+	static List<Person> pList= new ArrayList<Person>();
 }

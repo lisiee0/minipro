@@ -1,28 +1,11 @@
 package minipro02;
 
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
-public class Option_input {
-	
-	static List<Person> pList= new ArrayList<Person>();
-	
-	public static void makeList(BufferedReader br) throws IOException {		
-		while(true) {
-			String line= br.readLine();
-			if(line==null) {
-				break;
-			}
-			String[] info= line.split(",");
-			pList.add(new Person(info[0], info[1], info[2]));	
-		}
-	}
-	
+public class Option_input extends Person {
 	
 	public static void enroll() {	
 		Scanner ent= new Scanner(System.in); // ent 스캐너를 여기서 닫으면 오류발생

@@ -1,8 +1,10 @@
 package minipro02;
 
+import java.io.BufferedReader;
+import java.io.IOException;
 import java.util.ArrayList;
 
-public class Option_output {
+public class Option_output extends Person {
 	
 	public static void opening() {
 		System.out.println("*********************************");
@@ -33,6 +35,17 @@ public class Option_output {
 		for(Person p: pList) {
 			System.out.print(pList.indexOf(p)+1+".  ");
 			p.showInfo();
+		}
+	}
+	
+	public static void makeList(BufferedReader br) throws IOException {		
+		while(true) {
+			String line= br.readLine();
+			if(line==null) {
+				break;
+			}
+			String[] info= line.split(",");
+			pList.add(new Person(info[0], info[1], info[2]));	
 		}
 	}
 }
