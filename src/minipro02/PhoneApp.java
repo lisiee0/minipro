@@ -14,7 +14,7 @@ public class PhoneApp {
 	public static void main(String[] args) throws IOException {
 		
 		BufferedReader br= new BufferedReader(new FileReader("C:\\javaStudy\\file\\minipro\\PhoneDB.txt"));
-		PhoneApp.makeList(br);
+		Option_output.makeList(br);
 		
 		Scanner sc= new Scanner(System.in);
 		boolean action= true;
@@ -27,21 +27,21 @@ public class PhoneApp {
 			
 			switch(order) {
 				case 1: 
-					PhoneApp.showList();
+					Option_output.showList();
 					break;
 	
 				case 2:
-					PhoneApp.enroll();
-					PhoneApp.reWrite();
+					Option_input.enroll();
+					Option_output.reWrite();
 					break;
 					
 				case 3:
-					PhoneApp.delete();
-					PhoneApp.reWrite();
+					Option_input.delete();
+					Option_output.reWrite();
 					break;
 					
 				case 4:
-					PhoneApp.search();
+					Option_input.search();
 					break;
 					
 				case 5: 
@@ -53,8 +53,7 @@ public class PhoneApp {
 					Option_output.reenter();
 					break;
 			}
-		}
-		
+		}		
 		sc.close();
 	}
 }

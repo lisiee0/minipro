@@ -1,8 +1,5 @@
 package minipro02;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.Scanner;
 
 public class Option_input extends Person {
@@ -21,15 +18,6 @@ public class Option_input extends Person {
 		System.out.println("[등록되었습니다.]");
 		
 		pList.add(new Person(name, hp, company));
-	}
-	
-	public static void reWrite() throws IOException {
-		BufferedWriter bw= new BufferedWriter(new FileWriter("C:\\javaStudy\\file\\minipro\\PhoneDB.txt"));
-		for(Person p: pList) {
-			bw.write(p.save());
-			bw.newLine();
-		}
-		bw.close();
 	}
 	
 	public static void delete() {

@@ -1,8 +1,9 @@
 package minipro02;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class Option_output extends Person {
 	
@@ -30,7 +31,7 @@ public class Option_output extends Person {
 		System.out.println("[다시 입력해 주세요.]");
 	}
 	
-	public static void showList(ArrayList pList) {
+	public static void showList() {
 		System.out.println("<1.리스트>");
 		for(Person p: pList) {
 			System.out.print(pList.indexOf(p)+1+".  ");
@@ -47,5 +48,14 @@ public class Option_output extends Person {
 			String[] info= line.split(",");
 			pList.add(new Person(info[0], info[1], info[2]));	
 		}
+	}
+	
+	public static void reWrite() throws IOException {
+		BufferedWriter bw= new BufferedWriter(new FileWriter("C:\\javaStudy\\file\\minipro\\PhoneDB.txt"));
+		for(Person p: pList) {
+			bw.write(p.save());
+			bw.newLine();
+		}
+		bw.close();
 	}
 }
