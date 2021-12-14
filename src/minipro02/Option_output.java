@@ -1,5 +1,7 @@
 package minipro02;
 
+import java.util.ArrayList;
+
 public class Option_output {
 	
 	public static void opening() {
@@ -24,5 +26,13 @@ public class Option_output {
 	
 	public static void reenter() {
 		System.out.println("[다시 입력해 주세요.]");
+	}
+	
+	public static void showList(ArrayList pList) {
+		System.out.println("<1.리스트>");
+		for(Person p: pList) {
+			System.out.print(pList.indexOf(p)+1+".  ");
+			p.showInfo();
+		}
 	}
 }
