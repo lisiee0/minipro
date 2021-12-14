@@ -4,6 +4,10 @@ import java.io.IOException;
 
 public class Option_input extends Person {
 	
+	public static int order() throws IOException {
+		return Integer.parseInt(input.readLine());
+	}
+	
 	public static void enroll() throws IOException {	
 		System.out.println("<2.등록>");
 		System.out.print(">이름: ");
