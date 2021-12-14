@@ -1,5 +1,7 @@
 package com.javaex.minipro02;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,6 +45,11 @@ public class Person {
 		this.company = company;
 	}
 
+	
+	static List<Person> pList= new ArrayList<Person>();
+	
+	static BufferedReader input= new BufferedReader(new InputStreamReader(System.in));
+	
 	public void showInfo() {
 		System.out.println(name+"  "+hp+"  "+company);
 	}
@@ -51,5 +58,4 @@ public class Person {
 		return name+","+hp+","+company;
 	}
 	
-	static List<Person> pList= new ArrayList<Person>();
 }
